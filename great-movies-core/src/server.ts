@@ -1,14 +1,21 @@
 import express from "express";
 import bodyParser from "body-parser";
+import mongoose from "mongoose";
 
 // Controllers (route handlers)
 import * as homeController from "./controllers/home";
+
 
 const server = express();
 
 server.use(bodyParser.json());
 server.use(bodyParser.urlencoded({ extended: true }));
 
+
+mongoose
+    .connect("mongodb://mongo:27017", {useMongoClient: true})
+    .then(() => console.log('MongoDB Connected'))
+    .catch(err => console.log(err));
 
 server.get('/', homeController.index);
 
