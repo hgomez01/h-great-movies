@@ -1,0 +1,11 @@
+{
+  "name": "great-movies-core",
+  "version": "1.0.0",
+  "description": "Back-end Rest API for rental and video selling",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Herberth Gomez Garay",
+  "license": "ISC"
+}
