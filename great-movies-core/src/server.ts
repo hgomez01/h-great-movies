@@ -13,7 +13,7 @@ server.use(bodyParser.urlencoded({ extended: true }));
 
 
 mongoose
-    .connect("mongodb://mongo:27017", {useMongoClient: true})
+    .connect("mongodb://mongo:27017")
     .then(() => console.log('MongoDB Connected'))
     .catch(err => console.log(err));
 

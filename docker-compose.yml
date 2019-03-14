@@ -10,21 +10,19 @@ services:
       - mongo
     networks:
       - webappnetwork
-  webapp:
-    build:
-      context: great-movies-client
-      dockerfile: Dockerfile
-    ports :
-      - "4200:4200"
-    links:
-      - restapi
-    networks:
-      - webappnetwork
+  # webapp:
+  #   build:
+  #     context: great-movies-client
+  #     dockerfile: Dockerfile
+  #   ports :
+  #     - "4200:4200"
+  #   links:
+  #     - restapi
+  #   networks:
+  #     - webappnetwork
   mongo:
     container_name: mongo
     image: mongo
-    volumes:
-      - ./data:/data/db
     ports:
       - "27017:27017"
     networks:
