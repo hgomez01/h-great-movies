@@ -1,4 +1,4 @@
-var mongoose = require('mongoose');
+import * as mongoose from 'mongoose';
 var schema = mongoose.Schema;
 
 let movie = new schema({
