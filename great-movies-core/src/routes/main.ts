@@ -1,4 +1,4 @@
-const apiRoutes = require('./api');
+const apiRoutes = require('./api/movies');
 
 const init = (server) => {
     server.get('*', (req, res, next) => { return next(); });

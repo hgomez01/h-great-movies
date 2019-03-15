@@ -5,12 +5,18 @@ import mongoose from "mongoose";
 /* Importing database connection */
 const config = require("./configs/db");
 
+/* Importing routes */
+let allRoutes = require("./routes/main");
+
 /* Creating server */
 const server = express();
 
 /* setting usage of body parser for better experience working with json */
 server.use(bodyParser.json());
 server.use(bodyParser.urlencoded({ extended: true }));
+
+/* Passing server as parameter to set all routes */
+allRoutes.init(server);
 
 // Setting environment port or setting one by default
 let port = process.env.PORT || 3000;
