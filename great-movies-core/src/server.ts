@@ -17,9 +17,10 @@ server.use(bodyParser.urlencoded({ extended: true }));
 // Setting environment port or setting one by default
 let port = process.env.PORT || 3000;
 
-var movieRoutes = require('./routes/moviesRoutes')(express);
+import * as homeController from "./routes/moviesRoutes";
 
-server.use('/api/movie', movieRoutes);
+// var movieRoutes = require('./routes/moviesRoutes')(express);
+server.use('/api/movie', homeController);
 
 /* Creating database connection */
 mongoose
