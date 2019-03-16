@@ -2,6 +2,8 @@ import express from "express";
 import bodyParser from "body-parser";
 import mongoose from "mongoose";
 
+// var globalRouter = express.Router();
+
 /* Importing database connection */
 const config = require("./configs/db");
 
@@ -14,6 +16,10 @@ server.use(bodyParser.urlencoded({ extended: true }));
 
 // Setting environment port or setting one by default
 let port = process.env.PORT || 3000;
+
+var movieRoutes = require('./routes/moviesRoutes')(express);
+
+server.use('/api/movie', movieRoutes);
 
 /* Creating database connection */
 mongoose
