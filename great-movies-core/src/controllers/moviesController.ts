@@ -1,16 +1,39 @@
 /* File dependencies */
-import * as mongoose from 'mongoose';
-let moviesModel = require("./../models/movie");
+import {Request, Response} from "express";
 
-exports.getAllMovies = function (request, response) {
-    moviesModel.find((error, movies) => {
-        if (!error) {
-            response.json(movies);
+export let allMovies = (req: Request, res: Response) => {
+    
+    let prodModels = require("../models/movie");
+
+    prodModels.find((err: any, result: any) => {
+        if(err) {
+            console.log("Error retrieving data");
         } else {
-            response.status(500).send(error);
+            console.log("reading from db");
+            res.json(result);
         }
-    });
+      });
 };
+
+
+
+
+// import * as mongoose from 'mongoose';
+// var moviesModel = require("./../models/movie");
+
+// exports.getAllMovies = function (request, response) {
+//     console.log("get all movies");
+//     moviesModel.find( function(error, movies)  {
+//         console.log("inside find");
+//         if (!error) {
+//             console.log(movies);
+//             response.json(movies);
+//         } else {
+//             console.log(error);
+//             response.status(500).send(error);
+//         }
+//     });
+// };
 // // Dependencies
 // var mongoose        = require('mongoose'),
 //     Products        = require('./../models/productModel'),

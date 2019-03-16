@@ -1,7 +1,7 @@
-import * as mongoose from 'mongoose';
+import mongoose from 'mongoose';
 var schema = mongoose.Schema;
 
-let movie = new schema({
+var movie = new schema({
     title : { type: String, required: true},
     description : { type: String, required: true},
     coverUrl : { type: String, required: true},
@@ -12,4 +12,4 @@ let movie = new schema({
     status: { type: String, enum: ['Active','Deleted'], default: 'Active' }
 });
 
-module.exports = mongoose.model('movie', movie);
+module.exports = mongoose.model('test985564615asdasd', movie);

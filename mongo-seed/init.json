@@ -1,0 +1,22 @@
+[
+  {
+    "title" : "Sicario",
+    "description" : "After rising through the ranks of her male-dominated profession, idealistic FBI agent Kate Macer receives a top assignment. Recruited by mysterious government official Matt Graver, Kate joins a task force for the escalating war against drugs.",
+    "coverUrl" : "http://es.web.img2.acsta.net/c_215_290/pictures/15/11/13/12/43/446246.jpg",
+    "stock" : "9",
+    "rentalPrice" : "4.25",
+    "salePrice" : "20",
+    "availability": "Available",
+    "status": "Active"
+},
+{
+    "title" : "Triple 9",
+    "description" : "Bullets fly on the Atlanta freeway as armed thieves make their getaway following a bank robbery in broad daylight. Unhappy with the results, ruthless gangster Irina Vlaslov orders the men to pull off another job. One member of the team is Marcus Belmont, a crooked cop who gets saddled with Chris Allen, his new but incorruptible police partner.",
+    "coverUrl" : "https://www.unilad.co.uk/wp-content/uploads/2016/07/triple-nine-review.jpg",
+    "stock" : "5",
+    "rentalPrice" : "2",
+    "salePrice" : "10",
+    "availability": "Available",
+    "status": "Active"
+}
+]

@@ -1,18 +1,47 @@
 // import express from "express";
-let moviesController = require("./../controllers/moviesController");
+// let moviesController = require("./../controllers/moviesController");
 // var movieRoute = express.Router();
 
-var moviesRoutes = function (server) {
+// var moviesRoutes = function (server) {
 
-    var movieRoute = server.Router();
+//     // console.log("movies routes");
+//     var movieRoute = server.Router();
+
+//     movieRoute.route('/')
+//         .get(moviesController.getAllMovies);
+    
+//     return movieRoute;
+// };
+
+// module.exports = moviesRoutes;
+
+import * as express from "express";
+import * as moviesController from "./../controllers/moviesController";
+let movieRoute = express.Router();
+
+/* GET home page. */
+export let index = () => {
+    
+    // var movieRoute = express.Router();
 
     movieRoute.route('/')
-        .get(moviesController.getAllMovies);
+        .get(moviesController.allMovies);
     
     return movieRoute;
+    // let testModel = require("../models/testModel");
+
+    // testModel.find((err: any, result: any) => {
+    //     if(err) {
+    //         console.log("Error retrieving data");
+    //     } else {
+    //         console.log("reading from db");
+    //         res.json(result);
+    //     }
+    //   });
 };
 
-module.exports = moviesRoutes;
+
+
 
 // // Dependencies
 // var products = require('./../controllers/productsController');
