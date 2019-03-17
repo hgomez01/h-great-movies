@@ -54,12 +54,12 @@ let printMigrationResults = (dbSchema, error, results) => {
         console.log(`Collection ${dbSchema.collection.collectionName} has been imported successfully`)
     }
 }
-
+/*
 let cleanDB = mongoose.connection.db.dropDatabase((error, result) => {
     if (error)
         console.error("Error dropping the database: " + error);
     else
         console.log("DB has been dropped. " + result);
 });
-
+*/
 exports.module = runMigration;

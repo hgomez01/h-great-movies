@@ -5,13 +5,23 @@ var InvoiceModel = require("./../models/invoice");
 var InvoiceDetailModel = require("./../models/invoiceDetails");
 
 // method to buy a product
-export  const buyMovie = (req: Request, res: Response) => {
+export const buyMovie = (req: Request, res: Response) => {
+
     // creating a new invoice
     var bill = new InvoiceModel({
         clientId : res.decoded.userId,
         total : req.body.total,
-        transType : 'Sell'
-    })
+    });
+
+    if(req.body.isRental){
+        var estimatedReturn = new Date();
+
+        bill['transType'] = 'Rental';
+        bill['estimatedReturnDate'] = estimatedReturn.getDate()+7;
+    } else {
+        bill['transType'] = 'Sell';
+    }
+
     // saving invoice
     bill.save((error) => {
         if(error){
