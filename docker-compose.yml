@@ -16,6 +16,9 @@ services:
       dockerfile: Dockerfile
     ports :
       - "5000:4200"
+    links:
+      - mongo_db
+      - restapi
     networks:
       - webappnetwork
   mongo_db:
