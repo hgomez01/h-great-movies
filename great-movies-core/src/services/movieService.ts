@@ -27,9 +27,7 @@ export const getAllMovies = (req: Request, res: Response) => {
                 'error': 'An error has occurred retrieving all movies',
             });
         } else {
-            return res.status(200).json({
-                'data': results
-            })
+            return res.status(200).json(results);
         }
     });
 };
