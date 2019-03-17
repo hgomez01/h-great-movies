@@ -12,6 +12,9 @@ const server = express();
 /* Importing routes files */
 let routes = require('./routes');
 
+/* Importing migration script to seeds the db*/
+let migrationsSeeds = require("./migrations/migrations");
+
 /* setting usage of body parser for better experience working with json */
 server.use(bodyParser.json());
 server.use(bodyParser.urlencoded({ extended: true }));
@@ -28,6 +31,9 @@ mongoose
     .then(() => {
         // Starting server once the connection with the db has been established
         server.listen(port, function () {
+            /* Seeding the database */
+            migrationsSeeds.runMigration;
+
             console.log(`Express server listening on - http://localhost:${port}`);
         });
     })
