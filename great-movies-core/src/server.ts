@@ -1,3 +1,4 @@
+/* Importing pagckage dependencies */
 import express from "express";
 import bodyParser from "body-parser";
 import mongoose from "mongoose";
@@ -8,12 +9,18 @@ const config = require("./configs/db");
 /* Creating server */
 const server = express();
 
+/* Importing routes files */
+let routes = require('./routes');
+
 /* setting usage of body parser for better experience working with json */
 server.use(bodyParser.json());
 server.use(bodyParser.urlencoded({ extended: true }));
 
 // Setting environment port or setting one by default
 let port = process.env.PORT || 3000;
+
+// Set up routes
+routes.init(server);
 
 /* Creating database connection */
 mongoose

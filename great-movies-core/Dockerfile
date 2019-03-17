@@ -12,5 +12,7 @@ RUN npm install
 COPY . /usr/src/coreapp
 # Exposing port in use
 EXPOSE 3000
+# Building application before starting it
+RUN npm run build
 # Running the node application
 CMD [ "npm", "start" ]
