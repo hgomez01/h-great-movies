@@ -55,4 +55,11 @@ let printMigrationResults = (dbSchema, error, results) => {
     }
 }
 
+let cleanDB = mongoose.connection.db.dropDatabase((error, result) => {
+    if (error)
+        console.error("Error dropping the database: " + error);
+    else
+        console.log("DB has been dropped. " + result);
+});
+
 exports.module = runMigration;
