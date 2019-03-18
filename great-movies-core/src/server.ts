@@ -31,7 +31,7 @@ mongoose
     .then(() => {
         // Starting server once the connection with the db has been established
         server.listen(port, function () {
-            /* Seeding the database */
+
             migrationsSeeds.runMigration;
 
             console.log(`Express server listening on - http://localhost:${port}`);

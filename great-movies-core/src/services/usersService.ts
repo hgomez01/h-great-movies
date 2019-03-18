@@ -57,7 +57,7 @@ const signIn = (req: Request, resp: Response) => {
                 var token = jwt.sign(payload, sconf.secretKey, {
                     expiresIn : 18000 /* Expiration time: 5 hours */
                 });
-                return resp.status(200).json({success : true, message:'Authorized', token : token});
+                return resp.status(200).json({success : true, message:'Authorized', token : token, userId : user._id});
             } else {
                 return responseMessages(resp, 'User unauthorized',401);
             }

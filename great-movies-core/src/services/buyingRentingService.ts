@@ -9,7 +9,7 @@ export const buyRentMovie = (req: Request, res: Response) => {
 
     // creating a new invoice
     var bill = new InvoiceModel({
-        clientId: res.decoded.userId,
+        clientId: req.body.userId,
         total: req.body.total,
     });
 

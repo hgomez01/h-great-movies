@@ -1,37 +1,43 @@
 const userSeed = [
     {
         "name": "Herberth Administrator",
-        "password": "hgomez@admin.com",
+        "email": "hgomez@admin.com",
+        "password" : "$2a$10$1Nl676sQrYhbPwZjswI3p.jEik/n2Pips4aISkU.qM5bo6/IcHoZa", // hashed password for -> 123456789
         "role": "Admin",
         "status": "Enabled",
     },
     {
         "name": "General Administrator",
-        "password": "administrator@greatmovies.com",
+        "email": "administrator@greatmovies.com",
+        "password" : "$2a$10$1Nl676sQrYhbPwZjswI3p.jEik/n2Pips4aISkU.qM5bo6/IcHoZa",
         "role": "Admin",
         "status": "Enabled",
     },
     {
         "name": "General user 01",
-        "password": "user01@gmail.com",
+        "email": "user01@gmail.com",
+        "password" : "$2a$10$1Nl676sQrYhbPwZjswI3p.jEik/n2Pips4aISkU.qM5bo6/IcHoZa",
         "role": "General",
         "status": "Enabled",
     },
     {
         "name": "General user 02",
-        "password": "user02@yahoo.com",
+        "email": "user02@yahoo.com",
+        "password" : "$2a$10$1Nl676sQrYhbPwZjswI3p.jEik/n2Pips4aISkU.qM5bo6/IcHoZa",
         "role": "General",
         "status": "Enabled",
     },
     {
         "name": "General user 03",
-        "password": "user03@hotmail.com",
+        "email": "user03@hotmail.com",
+        "password" : "$2a$10$1Nl676sQrYhbPwZjswI3p.jEik/n2Pips4aISkU.qM5bo6/IcHoZa",
         "role": "General",
         "status": "Enabled",
     },
     {
         "name": "General user 04",
-        "password": "user04@outlook.com",
+        "email": "user04@outlook.com",
+        "password" : "$2a$10$1Nl676sQrYhbPwZjswI3p.jEik/n2Pips4aISkU.qM5bo6/IcHoZa",
         "role": "General",
         "status": "Enabled",
     }

@@ -11,11 +11,12 @@ const movieSeed = [
         "status": "Active"
     },
     {
+        "_id": "5c8fb642d754aa0011730ab6",
         "title": "Sicario",
         "description": "After rising through the ranks of her male-dominated profession, idealistic FBI agent Kate Macer receives a top assignment. Recruited by mysterious government official Matt Graver, Kate joins a task force for the escalating war against drugs.",
         "coverUrl": "http://es.web.img2.acsta.net/c_215_290/pictures/15/11/13/12/43/446246.jpg",
         "stock": "9",
-        "rentalPrice": "4.25",
+        "rentalPrice": "2.50",
         "salePrice": "20",
         "availability": "Available",
         "status": "Active"
@@ -61,6 +62,7 @@ const movieSeed = [
         "status": "Active"
     },
     {
+        "_id": "5c8fb642d754aa0011730abb",
         "title": "The dictator",
         "description": "Gen. Aladeen has ruled the oil-rich North African country of Wadiya since the age of six, when 97 stray bullets and a hand grenade killed his father in a hunting accident. After an assassination attempt takes the life of yet another body-double, Tamir, Aladeen's uncle and most trusted adviser, convinces Aladeen to go to New York. Unfortunately, Aladeen has a less-than-friendly reception from exiled Wadiyans, who want their country freed from his despotic rule",
         "coverUrl": "https://1645110239.rsc.cdn77.org/image/f330x470/q80/mm/been/movies10256/posters/the-dictator.20190201000000.jpg",
@@ -72,6 +74,7 @@ const movieSeed = [
 
     },
     {
+        "_id": "5c8fb642d754aa0011730abc",
         "title": "Deadpool 2",
         "description": "Wisecracking mercenary Deadpool meets Russell, an angry teenage mutant who lives at an orphanage. When Russell becomes the target of Cable -- a genetically enhanced soldier from the future -- Deadpool realizes that he'll need some help saving the boy from such a superior enemy. He soon joins forces with Bedlam, Shatterstar, Domino and other powerful mutants to protect young Russell from Cable and his advanced weaponry.",
         "coverUrl": "https://www.bigw.com.au/medias/sys_master/images/images/h90/h7a/12107445895198.jpg",
