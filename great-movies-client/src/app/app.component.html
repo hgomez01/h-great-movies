@@ -1,34 +1,4 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <app-navbar></app-navbar>
-<div style="text-align:center">
-    <h1>
-        Welcome to <strong class="titles"> {{ title }}!</strong>
-    </h1>
-</div>
-
-<div class="generalContent container">
-    <!-- movies paged -->
-    <div class="media" *ngFor="let item of pagedMovies">
-        <img class="mr-3 align-self-center resize-image" src={{item.coverUrl}} alt="{{item.title}}">
-        <div class="media-body movie-description">
-            <h5 class="mt-0"> <strong class="titles">{{item.title}}</strong></h5>
-            {{item.description}}
-        </div>
-    </div>
-
-    <!-- pagination -->
-    <ul *ngIf="pager.pages && pager.pages.length" class="pagination justify-content-center">
-        <li class="page-item disabled" [ngClass]="{disabled:pager.currentPage === 1}">
-            <a class="page-link" (click)="setPage(pager.currentPage - 1)">Previous</a>
-        </li>
-        <li class="page-item" *ngFor="let page of pager.pages" [ngClass]="{active:pager.currentPage === page}">
-            <a class="page-link" (click)="setPage(page)">{{page}}</a>
-        </li>
-        <li class="page-item" [ngClass]="{disabled:pager.currentPage === pager.totalPages}">
-            <a class="page-link" (click)="setPage(pager.currentPage + 1)">Next</a>
-        </li>
-    </ul>
-</div>
-
 
 <router-outlet></router-outlet>
