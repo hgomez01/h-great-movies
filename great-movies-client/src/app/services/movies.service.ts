@@ -15,10 +15,11 @@ export class MoviesService extends MainService {
     super();
   }
 
-  getMovies00() : Observable<Movies[]> {
-    const allMoviesUrl = `${MainService.baseUrl03}movies`;
+  getMovies() : Observable<Movies[]> {
+    const allMoviesUrl = `${MainService.baseUrl}movies`;
 
-    return this.http.get(allMoviesUrl).pipe(
+    /* Getting all active movies  */
+    return this.http.get(allMoviesUrl, { params : {status : 'Active'} }).pipe(
       map((data: any[]) => data.map((m: any) => new Movies(
               m.title,
               m.description,

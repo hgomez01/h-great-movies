@@ -3,6 +3,7 @@ Rental and Video Selling application
 
 
 > Core application: RESFul API
+
 > Cilent application: Angular Client which serves core data
 
 
@@ -14,9 +15,11 @@ Rental and Video Selling application
 Open a command line which allows you to run docker (based on docker installation preferences).
 
 Then cd to main project directory and run:
-    docker-compose build
-    docker-compose up
-
+```
+docker-compose build
+docker-compose up
+```
+Once is running just go to your web browser and go to http://localhost:5000/ and enjoy.
 
 ## Technologies used?
 1. Docker -> So this project can run with any env
