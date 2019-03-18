@@ -59,6 +59,28 @@ const movieSeed = [
         "salePrice": "20",
         "availability": "Available",
         "status": "Active"
+    },
+    {
+        "title": "The dictator",
+        "description": "Gen. Aladeen has ruled the oil-rich North African country of Wadiya since the age of six, when 97 stray bullets and a hand grenade killed his father in a hunting accident. After an assassination attempt takes the life of yet another body-double, Tamir, Aladeen's uncle and most trusted adviser, convinces Aladeen to go to New York. Unfortunately, Aladeen has a less-than-friendly reception from exiled Wadiyans, who want their country freed from his despotic rule",
+        "coverUrl": "https://1645110239.rsc.cdn77.org/image/f330x470/q80/mm/been/movies10256/posters/the-dictator.20190201000000.jpg",
+        "stock": "7",
+        "rentalPrice": "2",
+        "salePrice": "10",
+        "availability": "Unavailable",
+        "status": "Active"
+
+    },
+    {
+        "title": "Deadpool 2",
+        "description": "Wisecracking mercenary Deadpool meets Russell, an angry teenage mutant who lives at an orphanage. When Russell becomes the target of Cable -- a genetically enhanced soldier from the future -- Deadpool realizes that he'll need some help saving the boy from such a superior enemy. He soon joins forces with Bedlam, Shatterstar, Domino and other powerful mutants to protect young Russell from Cable and his advanced weaponry.",
+        "coverUrl": "https://www.bigw.com.au/medias/sys_master/images/images/h90/h7a/12107445895198.jpg",
+        "stock": "3",
+        "rentalPrice": "7",
+        "salePrice": "20",
+        "availability": "Available",
+        "status": "Active"
+
     }
 ]
 exports.module = movieSeed;

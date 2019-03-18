@@ -4,6 +4,8 @@ import mongoose from "mongoose";
 /* Building script to seed the database */
 const runMigration = mongoose.connection.on('open', function (ref) {
 
+    // Cleaning db before seeding it
+    cleanDB;
     // Retrieving the list of collections for the current database
     mongoose.connection.db.listCollections().toArray(function (err, names) {
 
@@ -16,6 +18,11 @@ const runMigration = mongoose.connection.on('open', function (ref) {
             let moviesSch = require("./../models/movie");
             moviesSch.insertMany(moviesSeed.module, (err, res) => { printMigrationResults(moviesSch, err, res) });
 
+            // Running migration for Users
+            let usersSeed = require("./seeds/movies");
+            let usersSch = require("./../models/movie");
+            usersSch.insertMany(usersSeed.module, (err, res) => { printMigrationResults(usersSch, err, res) });
+
             /* TODO -----> Add seeds files */
 /***
             // Running migration for Movies History
@@ -27,11 +34,6 @@ const runMigration = mongoose.connection.on('open', function (ref) {
             let popularitySeed = require("./seeds/movies");
             let popularitySch = require("./../models/movie");
             popularitySch.insertMany(popularitySeed.module, (err, res) => { printMigrationResults(popularitySch, err, res) });
-
-            // Running migration for Users
-            let usersSeed = require("./seeds/movies");
-            let usersSch = require("./../models/movie");
-            usersSch.insertMany(usersSeed.module, (err, res) => { printMigrationResults(usersSch, err, res) });
 
             // Running migration for Invoice
             let invoiceSeed = require("./seeds/movies");
@@ -54,12 +56,12 @@ let printMigrationResults = (dbSchema, error, results) => {
         console.log(`Collection ${dbSchema.collection.collectionName} has been imported successfully`)
     }
 }
-/*
+
 let cleanDB = mongoose.connection.db.dropDatabase((error, result) => {
     if (error)
         console.error("Error dropping the database: " + error);
     else
         console.log("DB has been dropped. " + result);
 });
-*/
+
 exports.module = runMigration;
