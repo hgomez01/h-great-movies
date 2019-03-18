@@ -1,0 +1,47 @@
+{
+	"info": {
+		"_postman_id": "d9bca977-f933-4a56-8cbe-bdac615947e6",
+		"name": "Transactions",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Renting movie",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc0FkbWluIjpmYWxzZSwidXNlcklkIjoiNWM4ZmM5NzUxYmFhYjUwMDExMzhkYTYwIiwiaWF0IjoxNTUyOTI3MTY1LCJleHAiOjE1NTI5NDUxNjV9.OdQEsewyAKhM6fHuBrPYDrt0P2T0CJBW-MSoqzR3cis",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"isRental\" : true,\n\t\"userId\" : \"5c8fc0a8f71a8a0011a8a129\",\n\t\"total\" : 25,\n\t\"details\" : [\n\t\t{\n\t\t\t\"productId\" : \"5c8fb642d754aa0011730ab6\",\n\t\t\t\"amount\" : \"10\",\n\t\t\t\"price\": \"25\"\n\t\t}\n\t]\n}"
+				},
+				"url": {
+					"raw": "http://localhost:1256/api/v2/trans/buyrent",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1256",
+					"path": [
+						"api",
+						"v2",
+						"trans",
+						"buyrent"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

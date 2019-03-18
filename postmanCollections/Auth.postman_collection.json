@@ -53,7 +53,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"email\" : \"user@admin.com\",\n\t\"password\" : \"123456789\"\n}"
+					"raw": "{\n\t\"email\" : \"user04@outlook.com\",\n\t\"password\" : \"123456789\"\n}"
 				},
 				"url": {
 					"raw": "http://localhost:1256/api/v2/auth/login",

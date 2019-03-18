@@ -1,0 +1,61 @@
+{
+	"info": {
+		"_postman_id": "af21b253-5c55-45d4-9048-136ef78685f9",
+		"name": "Movies",
+		"description": "Collections to test Movies endpoints",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get all movies",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:1256/api/v2/movies",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1256",
+					"path": [
+						"api",
+						"v2",
+						"movies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get one movie",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:1256/api/v2/movies/5c8dbcdf588e1300242ee30d",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1256",
+					"path": [
+						"api",
+						"v2",
+						"movies",
+						"5c8dbcdf588e1300242ee30d"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
