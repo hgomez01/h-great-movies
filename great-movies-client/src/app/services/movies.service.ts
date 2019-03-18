@@ -15,21 +15,21 @@ export class MoviesService extends MainService {
     super();
   }
 
-  getMovies() : Observable<Movies[]> {
+  getMovies(): Observable<Movies[]> {
     const allMoviesUrl = `${MainService.baseUrl}movies`;
 
     /* Getting all active movies  */
-    return this.http.get(allMoviesUrl, { params : {status : 'Active'} }).pipe(
+    return this.http.get(allMoviesUrl, { params: { status: 'Active', availability: 'Available' } }).pipe(
       map((data: any[]) => data.map((m: any) => new Movies(
-              m.title,
-              m.description,
-              m.coverUrl,
-              m.stock,
-              m.rentalPrice,
-              m.salePrice,
-              m.availability,
-              m.status
-          )))
-        );
+        m.title,
+        m.description,
+        m.coverUrl,
+        m.stock,
+        m.rentalPrice,
+        m.salePrice,
+        m.availability,
+        m.status
+      )))
+    );
   }
 }
