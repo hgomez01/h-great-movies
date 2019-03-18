@@ -34,7 +34,7 @@ export const getAllMovies = (req: Request, res: Response) => {
 
 // Get movie by Id
 export const findMovieById = (req: Request, resp: Response) => {
-    MoviesModel.findById( req.params.id, function( err, film ) {
+    MoviesModel.findById( req.params.movieId, function( err, film ) {
         if (err){
             return resp.status(500).send(err);
         } else if( film ) {
@@ -71,7 +71,7 @@ export const addMovie = (req: Request, res: Response) => {
 
 // Get movie by Identifier
 export const removeMovieById = (req: Request, resp: Response) => {
-    MoviesModel.findById( req.params.id, function( err, film ) {
+    MoviesModel.findById( req.params.movieId, function( err, film ) {
         if (err){
             resp.status(500).send(err);
         } else if( film ) {
