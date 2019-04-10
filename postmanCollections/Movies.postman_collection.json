@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "af21b253-5c55-45d4-9048-136ef78685f9",
+		"_postman_id": "567ea313-951a-455c-9fb4-733eb6e63f69",
 		"name": "Movies",
 		"description": "Collections to test Movies endpoints",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
@@ -16,12 +16,11 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "http://localhost:1256/api/v2/movies",
+					"raw": "http://{{base_url}}/api/v2/movies",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"{{base_url}}"
 					],
-					"port": "1256",
 					"path": [
 						"api",
 						"v2",
@@ -41,12 +40,11 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "http://localhost:1256/api/v2/movies/5c8dbcdf588e1300242ee30d",
+					"raw": "http://{{base_url}}/api/v2/movies/5c8dbcdf588e1300242ee30d",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"{{base_url}}"
 					],
-					"port": "1256",
 					"path": [
 						"api",
 						"v2",

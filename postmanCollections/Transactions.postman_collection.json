@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "d9bca977-f933-4a56-8cbe-bdac615947e6",
+		"_postman_id": "319804c1-b8a3-4d83-8292-5cc90d98d07a",
 		"name": "Transactions",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -27,12 +27,11 @@
 					"raw": "{\n\t\"isRental\" : true,\n\t\"userId\" : \"5c8fc0a8f71a8a0011a8a129\",\n\t\"total\" : 25,\n\t\"details\" : [\n\t\t{\n\t\t\t\"productId\" : \"5c8fb642d754aa0011730ab6\",\n\t\t\t\"amount\" : \"10\",\n\t\t\t\"price\": \"25\"\n\t\t}\n\t]\n}"
 				},
 				"url": {
-					"raw": "http://localhost:1256/api/v2/trans/buyrent",
+					"raw": "http://{{base_url}}/api/v2/trans/buyrent",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"{{base_url}}"
 					],
-					"port": "1256",
 					"path": [
 						"api",
 						"v2",
