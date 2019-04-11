@@ -41,6 +41,47 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "Transactions by user",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc0FkbWluIjpmYWxzZSwidXNlcklkIjoiNWM4ZmM5NzUxYmFhYjUwMDExMzhkYTYwIiwiaWF0IjoxNTUyOTI3MTY1LCJleHAiOjE1NTI5NDUxNjV9.OdQEsewyAKhM6fHuBrPYDrt0P2T0CJBW-MSoqzR3cis",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"transType\" : \"sell\",\n\t\"userId\" : \"5c8fc0a8f71a8a0011a8a129\"\n}"
+				},
+				"url": {
+					"raw": "http://{{base_url}}/api/v2/trans/",
+					"protocol": "http",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"v2",
+						"trans",
+						""
+					]
+				},
+				"description": "Get transactions by user"
+			},
+			"response": []
 		}
 	]
 }

@@ -6,7 +6,7 @@ let invoice = new schema({
     createdDate: { type: Date, required : true, default: Date.now() },
     clientId: { type: String, required: true },
     total: { type: Number, required: true },
-    transType: { type: String, enum: ['Rental','Sell'], required: true },
+    transType: { type: String, enum: ['rental','sell'], required: true },
     estimatedReturnDate: { type: Date },
     returnedDate: { type: Date },
     penality: { type: Number }
