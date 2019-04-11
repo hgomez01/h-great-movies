@@ -56,7 +56,7 @@ export const buyRentMovie = (req: Request, res: Response) => {
                                         // Returning success response when operation worked
                                         return res.status(201).json({
                                             success: true,
-                                            message: 'process successfully'
+                                            message: 'transaction performed successfully'
                                         });
                                     }
                                 });
@@ -102,7 +102,7 @@ export const deliverMovie = (req: Request, res: Response) => {
                 } else {
                     return res.status(201).json({
                         success: true,
-                        message: 'process successfully'
+                        message: 'deliveried successfully'
                     });
                 }
             })
@@ -110,6 +110,26 @@ export const deliverMovie = (req: Request, res: Response) => {
     });
 };
 
+export const getTransactions = (req: Request, res: Response) => {
+    let tFilter = {};
+
+    /* Checking if is getting for a specific id */
+    if (req.body.userId) {
+        tFilter['clientId'] = req.body.userId;
+    }
+    /* Checking type of transaction to filter by */
+    if (req.body.transType){
+        tFilter['transType'] = req.body.transType.toLocaleLowerCase() == 'rental' ? 'Rental' : 'Sell';
+    }
+
+    InvoiceModel.find(tFilter, (err: any , tResults: any) => {
+        if (err) {
+            return errorResponse(res, `error getting transactions : ${err.errmsg}`)
+        } else {
+            return res.status(200).json(tResults);
+        }
+    });
+}
 
 var errorResponse = (response, message) => {
     return response.status(500).json({
