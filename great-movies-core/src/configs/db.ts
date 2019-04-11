@@ -1,3 +1,3 @@
 module.exports = {
-    'database': 'mongodb://mongo_db:27017/greatmovies'
+    'database': process.env.DB_CONN || 'mongodb://mongo_db:27017/greatmovies'
 };
